@@ -9,11 +9,11 @@ import { HttpParams } from '@angular/common/http';
 })
 export class DoctorService {
   constructor(private http: HttpClient) {}
-  private apiUrl = 'http://localhost:8081/patient-service/registration/doctor';
+  private apiUrl = 'http://13.48.82.196:8103/patient-service/registration/doctor';
 
   getAllDepartments(): Observable<Department[]> {
     return this.http.get<Department[]>(
-      'http://localhost:8083/admin-service/department/getAll'
+      'http://13.48.82.196:8101/admin-service/department/getAll'
     );
   }
 
@@ -35,13 +35,13 @@ export class DoctorService {
 
   getPatients(name: String): Observable<any[]> {
     return this.http.get<any[]>(
-      `http://localhost:8081/patient-service/registration/patients/getByDoctor/${name}`
+      `http://13.48.82.196:8103/patient-service/registration/patients/getByDoctor/${name}`
     );
   }
 
   getDetails(): Observable<any[]> {
     return this.http.get<any[]>(
-      `http://localhost:8081/patient-service/registration/doctor/getAllWithDept`
+      `http://13.48.82.196:8103/patient-service/registration/doctor/getAllWithDept`
     );
   }
   getRegistrationsByDoctor(
@@ -54,7 +54,7 @@ export class DoctorService {
       .set('pageSize', pageSize.toString());
 
     return this.http.get<any[]>(
-      `http://localhost:8085/registration/getByDoctor/${name}`,
+      `http://13.48.82.196:8103/registration/getByDoctor/${name}`,
       { params }
     );
   }

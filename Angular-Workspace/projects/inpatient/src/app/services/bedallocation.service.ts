@@ -9,7 +9,7 @@ import { Ward } from '../../Model/ward.model';
   providedIn: 'root',
 })
 export class RoomRegisterService {
-  private apiUrl = 'http://localhost:8083/admin-service';
+  private apiUrl = 'http://13.48.82.196:8101/admin-service';
 
   constructor(private http: HttpClient) {}
 

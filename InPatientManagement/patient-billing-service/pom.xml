@@ -13,7 +13,6 @@
 	<artifactId>patient-billing-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>patient-billing-service</name>
-	<packaging>war</packaging>
 
 	<description>Demo project for Spring Boot</description>
 	<properties>

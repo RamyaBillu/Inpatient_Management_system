@@ -7,7 +7,7 @@ import { Department } from '../../Model/department.model';
   providedIn: 'root',
 })
 export class DepartmentService {
-  private apiUrl = 'http://localhost:8083/admin-service/department';
+  private apiUrl = 'http://13.48.82.196:8101/admin-service/department';
 
   constructor(private http: HttpClient) {}
 
@@ -19,28 +19,28 @@ export class DepartmentService {
       .set('_page', currentPage.toString())
       .set('_limit', pageSize.toString());
     return this.http.get<Department[]>(
-      'http://localhost:8083/admin-service/department/getAll',
+      'http://13.48.82.196:8101/admin-service/department/getAll',
       { params }
     );
   }
 
   saveDepartment(department: Department): Observable<Department> {
     return this.http.post<Department>(
-      `http://localhost:8083/admin-service/department/save`,
+      `http://13.48.82.196:8101/admin-service/department/save`,
       department
     );
   }
 
   updateDepartment(id: number, department: Department): Observable<Department> {
     return this.http.put<Department>(
-      `http://localhost:8083/admin-service/department/${id}`,
+      `http://13.48.82.196:8083/admin-service/department/${id}`,
       department
     );
   }
 
   deleteDepartment(department: Department): Observable<void> {
     return this.http.put<void>(
-      `http://localhost:8083/admin-service/department/updateStatus`,
+      `http://13.48.82.196:8083/admin-service/department/updateStatus`,
       department
     );
   }

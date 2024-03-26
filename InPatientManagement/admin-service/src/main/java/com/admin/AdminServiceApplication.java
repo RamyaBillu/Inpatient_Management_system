@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @SpringBootApplication // (exclude={DataSourceAutoConfiguration.class})
 
-public class AdminServiceApplication extends SpringBootServletInitializer{
+public class AdminServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AdminServiceApplication.class, args);

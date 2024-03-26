@@ -7,7 +7,7 @@ import { Room } from '../../Model/room.model';
   providedIn: 'root',
 })
 export class BedService {
-  private apiUrl = 'http://localhost:8083/admin-service/bed';
+  private apiUrl = 'http://13.48.82.196:8101/admin-service/bed';
 
   constructor(private http: HttpClient) {}
 
@@ -29,6 +29,6 @@ export class BedService {
   }
 
   getAllRooms(): Observable<Room[]> {
-    return this.http.get<Room[]>('http://localhost:8083/admin-service/room/getAll');
+    return this.http.get<Room[]>('http://13.48.82.196:8101/admin-service/room/getAll');
   }
 }

@@ -9,7 +9,7 @@ export class EnquiryService {
 
   getDetails(name: string): Observable<any[]> {
     return this.http.get<any[]>(
-      `http://localhost:8081/patient-service/patients/getByName/${name}`
+      `http://13.48.82.196:8103/patient-service/patients/getByName/${name}`
     );
   }
 }

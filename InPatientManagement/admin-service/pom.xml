@@ -13,7 +13,6 @@
 	<artifactId>admin-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>admin-service</name>
-	<packaging>war</packaging>
 
 	<description>Demo project for Spring Boot</description>
 	<properties>

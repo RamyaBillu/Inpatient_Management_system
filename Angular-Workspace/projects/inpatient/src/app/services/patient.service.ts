@@ -13,31 +13,31 @@ export class PatientService {
 
   getAllPatient(): Observable<Patient[]> {
     return this.http.get<Patient[]>(
-      'http://localhost:8081/patient-service/patients/getAll'
+      'http://13.48.82.196:8103/patient-service/patients/getAll'
     );
   }
 
   savePatient(patient: Patient): Observable<Patient> {
     return this.http.post<Patient>(
-      'http://localhost:8081/patient-service/patients/save',
+      'http://13.48.82.196:8103/patient-service/patients/save',
       patient
     );
   }
 
   updatePatient(id: number, patient: Patient): Observable<Patient> {
     return this.http.put<Patient>(
-      `http://localhost:8081/patient-service/patients/${id}`,
+      `http://13.48.82.196:8103/patient-service/patients/${id}`,
       patient
     );
   }
   getAlldoctor(): Observable<any[]> {
     return this.http.get<any[]>(
-      'http://localhost:8081/patient-service/doctor/getAll'
+      'http://13.48.82.196:8103/patient-service/doctor/getAll'
     );
   }
   getAllDepartments(): Observable<Department[]> {
     return this.http.get<Department[]>(
-      'http://localhost:8083/admin-service/department/getAll'
+      'http://13.48.82.196:8101/admin-service/department/getAll'
     );
   }
   private currentYear!: number;
