@@ -119,11 +119,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/netflix",
             "index": "projects/netflix/src/index.html",
-            "main": "projects/netflix/src/main.ts",
+            "browser": "projects/netflix/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -142,13 +142,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "5gb",
-                  "maximumError": "5gb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "5gb",
-                  "maximumError": "5gb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ],
               "outputHashing": "all"
@@ -217,11 +217,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/inpatient",
             "index": "projects/inpatient/src/index.html",
-            "main": "projects/inpatient/src/main.ts",
+            "browser": "projects/inpatient/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -240,13 +240,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "5gb",
-                  "maximumError": "5gb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "5gb",
-                  "maximumError": "5gb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ],
               "outputHashing": "all"
@@ -298,8 +298,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }
